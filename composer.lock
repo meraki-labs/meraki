@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "786a4046c9a2f2f6d0c677b7d999b6e1",
+    "content-hash": "f4f67bd03e40ebecec5b6c3427902a21",
     "packages": [
         {
             "name": "brick/math",
@@ -2021,11 +2021,17 @@
         },
         {
             "name": "merakilab/meraki-core",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../meraki-core",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/meraki-labs/meraki-core.git",
                 "reference": "6c0814227f4af2d732e7b9b301691c13db51c8cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/meraki-labs/meraki-core/zipball/6c0814227f4af2d732e7b9b301691c13db51c8cc",
+                "reference": "6c0814227f4af2d732e7b9b301691c13db51c8cc",
+                "shasum": ""
             },
             "require": {
                 "laravel/framework": "^12.0",
@@ -2044,6 +2050,7 @@
                     "Meraki\\Core\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2054,9 +2061,11 @@
                 }
             ],
             "description": "Meraki Core Framework",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/meraki-labs/meraki-core/issues",
+                "source": "https://github.com/meraki-labs/meraki-core/tree/v1.0.4"
+            },
+            "time": "2026-01-02T09:57:50+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -8401,9 +8410,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "merakilab/meraki-core": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
