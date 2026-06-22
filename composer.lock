@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4f67bd03e40ebecec5b6c3427902a21",
+    "content-hash": "6361ff981236ac93c5d8a4218b316f57",
     "packages": [
         {
             "name": "brick/math",
@@ -2018,6 +2018,65 @@
                 }
             ],
             "time": "2025-12-07T16:03:21+00:00"
+        },
+        {
+            "name": "merakilab/meraki-cms",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/Users/Shared/Development/MerakiLabs/meraki-cms",
+                "reference": "a2ed81dcf5f4145cd60bf0c2b6b2b6bd2f795ea7"
+            },
+            "require": {
+                "laravel/framework": "^12.0",
+                "merakilab/meraki-core": "*",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^10.0",
+                "phpunit/phpunit": "^11.0"
+            },
+            "type": "meraki-plugin",
+            "extra": {
+                "meraki": {
+                    "plugin": "plugin.json"
+                },
+                "laravel": {
+                    "providers": [
+                        "Meraki\\Cms\\CmsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Meraki\\Cms\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Meraki\\Cms\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DatPA",
+                    "email": "datpa@merakilabs.tech"
+                }
+            ],
+            "description": "Content Management System for the MerakiLabs ecosystem",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "merakilab/meraki-core",
@@ -8409,7 +8468,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
