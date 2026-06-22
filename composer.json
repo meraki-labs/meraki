@@ -1,5 +1,5 @@
 {
-    "name": "merakilab/meraki",
+    "name": "merakilab/meraki-template",
     "type": "project",
     "description": "The skeleton application for the Meraki's Lab framework.",
     "keywords": [
@@ -11,7 +11,10 @@
         "php": "^8.2",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "merakilab/meraki-core": "^1.0.4"
+        "merakilab/meraki-core": "dev-main",
+        "merakilab/meraki-auth": "dev-main",
+        "merakilab/meraki-activity": "dev-main",
+        "merakilab/meraki-data-safety": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -45,7 +48,7 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve --host=0.0.0.0 --port=8000\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
         ],
         "test": [
             "@php artisan config:clear --ansi",
@@ -64,6 +67,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan meraki:install --ansi",
             "@php artisan migrate --graceful --ansi"
         ],
         "pre-package-uninstall": [
@@ -84,6 +88,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
