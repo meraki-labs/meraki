@@ -14,7 +14,8 @@
         "merakilab/meraki-core": "dev-main",
         "merakilab/meraki-auth": "dev-main",
         "merakilab/meraki-activity": "dev-main",
-        "merakilab/meraki-data-safety": "dev-main"
+        "merakilab/meraki-data-safety": "dev-main",
+        "merakilab/meraki-cms": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
